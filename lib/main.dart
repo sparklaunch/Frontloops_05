@@ -5,6 +5,7 @@ import "./constants.dart";
 import "./RegisterContainer.dart";
 import "./RegistrationBox.dart";
 import "./RegistrationTitle.dart";
+import "./RegistrationMethods.dart";
 import "./ImageBox.dart";
 
 void main() {
@@ -27,6 +28,7 @@ class Frontloops extends StatelessWidget {
                 child: RegistrationBox(
                   children: [
                     RegistrationTitle(),
+                    RegistrationMethods(),
                   ],
                 ),
               ),
