@@ -7,4 +7,11 @@ class RegistrationMethod {
     this._logo = logo;
     this._title = title;
   }
+  String getLogo() {
+    return this._logo;
+  }
+
+  String getTitle() {
+    return this._title;
+  }
 }
