@@ -3,16 +3,24 @@ import 'package:flutter/material.dart';
 import "./constants.dart";
 
 import "./RegisterContainer.dart";
+import "./Registration.dart";
 import "./RegistrationBox.dart";
+import "./RegistrationBrain.dart";
 import "./RegistrationTitle.dart";
+import "./RegistrationMethod.dart";
 import "./RegistrationMethods.dart";
+import "./RegistrationMethodBox.dart";
 import "./ImageBox.dart";
 
 void main() {
   runApp(Frontloops());
 }
 
+final RegistrationBrain registrationBrain = RegistrationBrain();
+
 class Frontloops extends StatelessWidget {
+  final List<RegistrationMethod> registrations =
+      registrationBrain.getRegistrationMethods();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -28,7 +36,34 @@ class Frontloops extends StatelessWidget {
                 child: RegistrationBox(
                   children: [
                     RegistrationTitle(),
-                    RegistrationMethods(),
+                    SizedBox(
+                      height: 80.0,
+                    ),
+                    RegistrationMethods(
+                      children: [
+                        RegistrationMethodBox(
+                          child: Registration(
+                            registrationMethod: this.registrations[0],
+                          ),
+                        ),
+                        SizedBox(
+                          height: 20.0,
+                        ),
+                        RegistrationMethodBox(
+                          child: Registration(
+                            registrationMethod: this.registrations[1],
+                          ),
+                        ),
+                        SizedBox(
+                          height: 20.0,
+                        ),
+                        RegistrationMethodBox(
+                          child: Registration(
+                            registrationMethod: this.registrations[2],
+                          ),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),

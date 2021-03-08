@@ -5,6 +5,8 @@ class RegistrationMethods extends StatelessWidget {
   RegistrationMethods({@required this.children});
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Column(
+      children: this.children,
+    );
   }
 }
