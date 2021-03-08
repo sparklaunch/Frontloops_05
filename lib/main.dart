@@ -36,6 +36,7 @@ class Frontloops extends StatelessWidget {
         ),
         body: RegisterContainer(
           child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(
                 flex: 7,

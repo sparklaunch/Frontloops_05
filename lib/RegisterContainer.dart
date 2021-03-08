@@ -13,6 +13,7 @@ class RegisterContainer extends StatelessWidget {
       color: kBackgroundColor,
       child: Center(
         child: Container(
+          clipBehavior: Clip.hardEdge,
           width: containerWidth,
           child: this.child,
           decoration: kContainerBoxDecoration,
