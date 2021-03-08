@@ -4,6 +4,7 @@ import "./constants.dart";
 
 import "./RegisterContainer.dart";
 import "./RegistrationBox.dart";
+import "./RegistrationTitle.dart";
 import "./ImageBox.dart";
 
 void main() {
@@ -23,7 +24,11 @@ class Frontloops extends StatelessWidget {
             children: [
               Expanded(
                 flex: 7,
-                child: RegistrationBox(),
+                child: RegistrationBox(
+                  children: [
+                    RegistrationTitle(),
+                  ],
+                ),
               ),
               Expanded(
                 flex: 5,
