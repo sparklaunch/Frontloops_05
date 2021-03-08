@@ -6,7 +6,7 @@ const Color kBackgroundColor = Color.fromRGBO(68, 71, 82, 1);
 
 final BoxDecoration kContainerBoxDecoration = BoxDecoration(
   color: Colors.white,
-  borderRadius: BorderRadius.circular(5.0),
+  borderRadius: BorderRadius.circular(8.0),
   boxShadow: [
     BoxShadow(
       blurRadius: 5.0,

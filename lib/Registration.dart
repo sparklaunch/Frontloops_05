@@ -2,6 +2,13 @@ import "package:flutter/material.dart";
 
 import "./RegistrationMethod.dart";
 
+const TextStyle registrationTextStyle = TextStyle(
+  fontWeight: FontWeight.bold,
+  color: Color.fromRGBO(128, 128, 128, 1),
+  fontSize: 14.0,
+  letterSpacing: 1.0,
+);
+
 class Registration extends StatelessWidget {
   final RegistrationMethod registrationMethod;
   Registration({@required this.registrationMethod});
@@ -13,12 +20,7 @@ class Registration extends StatelessWidget {
       title: Text(
         "SIGN UP WITH ${this.registrationMethod.getTitle()}",
         textAlign: TextAlign.center,
-        style: TextStyle(
-          fontWeight: FontWeight.bold,
-          color: Color.fromRGBO(128, 128, 128, 1),
-          fontSize: 14.0,
-          letterSpacing: 1.0,
-        ),
+        style: registrationTextStyle,
       ),
     );
   }

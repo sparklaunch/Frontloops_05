@@ -16,6 +16,7 @@ class RegistrationBox extends StatelessWidget {
         registrationBoxPadding,
       ),
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: this.children,
       ),

@@ -2,7 +2,6 @@ import "package:flutter/material.dart";
 
 import "./constants.dart";
 
-const double containerTopMargin = 100.0;
 const double containerWidth = 1200.0;
 
 class RegisterContainer extends StatelessWidget {
@@ -14,9 +13,6 @@ class RegisterContainer extends StatelessWidget {
       color: kBackgroundColor,
       child: Center(
         child: Container(
-          margin: EdgeInsets.only(
-            top: containerTopMargin,
-          ),
           width: containerWidth,
           child: this.child,
           decoration: kContainerBoxDecoration,

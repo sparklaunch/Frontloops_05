@@ -8,6 +8,7 @@ import "./RegistrationBox.dart";
 import "./RegistrationBrain.dart";
 import "./RegistrationTitle.dart";
 import "./RegistrationMethod.dart";
+import "./RegistrationFooter.dart";
 import "./RegistrationMethods.dart";
 import "./RegistrationMethodBox.dart";
 import "./ImageBox.dart";
@@ -15,6 +16,11 @@ import "./ImageBox.dart";
 void main() {
   runApp(Frontloops());
 }
+
+const double gapBetweenTitleAndRegistration = 80.0;
+const double gapBetweenRegistrations = 20.0;
+const double gapBetweenRegistrationAndFooter = 100.0;
+const double gapBetweenDividerAndFooter = 30.0;
 
 final RegistrationBrain registrationBrain = RegistrationBrain();
 
@@ -37,7 +43,7 @@ class Frontloops extends StatelessWidget {
                   children: [
                     RegistrationTitle(),
                     SizedBox(
-                      height: 80.0,
+                      height: gapBetweenTitleAndRegistration,
                     ),
                     RegistrationMethods(
                       children: [
@@ -47,7 +53,7 @@ class Frontloops extends StatelessWidget {
                           ),
                         ),
                         SizedBox(
-                          height: 20.0,
+                          height: gapBetweenRegistrations,
                         ),
                         RegistrationMethodBox(
                           child: Registration(
@@ -55,7 +61,7 @@ class Frontloops extends StatelessWidget {
                           ),
                         ),
                         SizedBox(
-                          height: 20.0,
+                          height: gapBetweenRegistrations,
                         ),
                         RegistrationMethodBox(
                           child: Registration(
@@ -64,6 +70,17 @@ class Frontloops extends StatelessWidget {
                         ),
                       ],
                     ),
+                    SizedBox(
+                      height: gapBetweenRegistrationAndFooter,
+                    ),
+                    Divider(
+                      thickness: 1.0,
+                      color: Color.fromRGBO(239, 239, 239, 1),
+                    ),
+                    SizedBox(
+                      height: gapBetweenDividerAndFooter,
+                    ),
+                    RegistrationFooter(),
                   ],
                 ),
               ),
