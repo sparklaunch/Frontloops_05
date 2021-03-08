@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 
+import "./constants.dart";
+
+import "./RegisterContainer.dart";
+import "./RegistrationBox.dart";
+import "./ImageBox.dart";
+
 void main() {
   runApp(Frontloops());
 }
@@ -7,6 +13,26 @@ void main() {
 class Frontloops extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: kAppTitle,
+        ),
+        body: RegisterContainer(
+          child: Row(
+            children: [
+              Expanded(
+                flex: 7,
+                child: RegistrationBox(),
+              ),
+              Expanded(
+                flex: 5,
+                child: ImageBox(),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
